@@ -22,6 +22,7 @@ public class MostFrequentChar {
         for(char key : map.keySet()) {
             int count = map.get(key);
 
+
             if(count > max) {
                 max = count;
                 answer = key;
