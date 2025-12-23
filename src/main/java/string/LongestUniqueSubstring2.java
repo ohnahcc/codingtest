@@ -29,6 +29,7 @@ public class LongestUniqueSubstring2 {
             if(maxlen < winlen){
                 maxlen = winlen;
             }
+
         }
         return maxlen;
     }

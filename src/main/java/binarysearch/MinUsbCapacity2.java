@@ -2,13 +2,13 @@ package binarysearch;
 
 import java.util.Scanner;
 
-public class MinUsbCapacity {
+public class MinUsbCapacity2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
-
         int[] Ai = new int[N];
+
         long lo = 0;
         long hi = 0;
         for(int i=0; i<N; i++) {
@@ -29,18 +29,18 @@ public class MinUsbCapacity {
         }
         System.out.println(answer);
     }
-    public static boolean canStore(int[] Ai, long M, long mid) {
-        int used = 1;
+
+    public static boolean canStore(int[] Ai, int M, long mid) {
+        int count = 1;
         long sum = 0;
 
         for(int a : Ai) {
             if(sum + a <= mid) {
                 sum = sum + a;
             } else {
-                used++;
+                count ++;
                 sum = a;
-
-                if (used > M) return false;
+                if(count > M) return false;
             }
         }
         return true;
